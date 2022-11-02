@@ -13,7 +13,9 @@ const productSlice = createSlice({
     },
     productListSuccess: (state, action) => {
       state.isLoading = false;
-      state.products = action.payload;
+      state.products = action.payload.products;
+      state.pages = action.payload.pages;
+      state.page = action.payload.page;
     },
     productListFail: (state, action) => {
       state.isLoading = false;
